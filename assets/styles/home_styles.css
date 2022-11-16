@@ -1,0 +1,46 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    cursor: pointer;
+}
+
+.tests {
+    width: 100%;
+}
+
+.tests > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 8px 0 8px 0;
+    margin: 10px 0 10px 0;
+}
+
+.tests h2 {
+    margin: 0 5px 0 5px;
+}
+.tests p {
+    margin: 0 2px 0 2px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.content a,
+.content .logOut {
+    width: 40%;
+    margin-top: 8px;
+    color: darkgreen;
+    font-size: 1.2rem;
+    cursor: pointer;
+}

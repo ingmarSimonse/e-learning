@@ -1,0 +1,18 @@
+# Een commentaarregel in htaccess schrijf je door te beginnen met een hash (#)
+
+# Start de rewrite engine om urls te herschrijven
+RewriteEngine On
+
+# De onderstaande regel voorkomt dat paden naar afbeeldingen worden herschreven
+RewriteRule ^(img)($|/) - [L]
+
+# Stel een conditie in, wanneer we de RewriteRules gaan gebruiken. Je kan
+# meerdere regels instellen
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Stel de RewriteRules in, hier geef je aan hoe de url wordt herschreven als deze
+# aan de voorwaarden voldoet die je stelt met de RewriteCond
+
+# De QSA-flag staat voor 'qsappend', en zorgt ervoor dat je de querystring weer terugplaats
+# De L-flag staat for 'last', en gedraagt zich als een break van een switch statement (in PHP)
+RewriteRule ^ index.php [QSA,L]
